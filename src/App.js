@@ -8,7 +8,7 @@ import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
 import About from "./pages/about/About";
 import Account from "./pages/account/Account";
-
+import Contact from "./pages/contact/Contact";
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/account" element={<Account />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/notFound" element={<NotFound />} />
       </Routes>
       <br />

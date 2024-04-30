@@ -60,7 +60,7 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0%;
-  text-align: left;
+  text-align: center;
   padding: 8px 87px;
   border-radius: 0px 0px 4px 4px;
   background: rgb(0, 0, 0);
@@ -72,6 +72,13 @@
   -webkit-transition: 0.5s ease !important;
   transition: 0.5s ease !important;
   margin-bottom: -41px;
+  transition: 0.5s ease;
+}
+.products .card .card__img .added {
+  background-color: #f1f1f1;
+  color: black;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .products .card .card__img .click {
   display: -webkit-box;
@@ -88,6 +95,8 @@
   margin-top: 10px;
   gap: 10px;
   position: absolute;
+}
+.products .card .card__img .click .eyeBtn {
   opacity: 0;
 }
 .products .card .card__img .click button {
@@ -104,6 +113,11 @@
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid black;
+}
+.products .card .card__img .click .likeBtn {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 .products .card .card__img .click .likes {
   color: red;
@@ -207,7 +221,7 @@
   transition: 0.5s ease !important;
   margin-bottom: 0 !important;
 }
-.card__img:hover .click {
+.card__img:hover .eyeBtn {
   -webkit-transition: 0.5s ease !important;
   transition: 0.5s ease !important;
   opacity: 1 !important;
