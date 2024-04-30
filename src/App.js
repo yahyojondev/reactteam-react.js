@@ -23,6 +23,7 @@ function App() {
       </Routes>
       <br />
       <br />
+      <h2>yahyojon</h2>
       <Footer />
     </div>
   );
