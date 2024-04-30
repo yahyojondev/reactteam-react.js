@@ -162,7 +162,7 @@ nav .navbar .icons .heartIcon, nav .navbar .icons a .heartIcon {
 nav .navbar .icons .cartIcon, nav .navbar .icons a .cartIcon {
   color: rgb(0, 0, 0);
 }
-nav .navbar .heart {
+nav .navbar .heart, nav .navbar .cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +170,7 @@ nav .navbar .heart {
       -ms-flex-align: center;
           align-items: center;
 }
-nav .navbar .heart sub {
+nav .navbar .heart sub, nav .navbar .cart sub {
   position: absolute;
   bottom: 38px;
   margin-left: 15px;
@@ -186,7 +186,7 @@ nav .navbar .heart sub {
           align-items: center;
   background-color: black;
 }
-nav .navbar .heart sub p {
+nav .navbar .heart sub p, nav .navbar .cart sub p {
   font-weight: 400;
   color: white;
   font-size: 10px;
@@ -201,35 +201,24 @@ nav a.active {
   color: blue !important;
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 992px) {
-  /* Your existing desktop styles */
-}
-/* Tablet Styles */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .sub__nav {
     padding: 5px 50px;
-    /* Adjusted padding */
   }
   .navbar {
     padding: 23px 50px;
-    /* Adjusted padding */
   }
   .nav__links {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    /* Stack links vertically */
     gap: 10px;
-    /* Adjusted gap */
   }
   .nav__links li {
     margin-right: 0;
-    /* Remove right margin */
   }
 }
-/* Phone Styles */
 @media only screen and (max-width: 767px) {
   .sub__nav {
     padding: 5px 20px;
@@ -257,6 +246,5 @@ nav a.active {
   }
   .navbar .menu-icon {
     display: block;
-    /* Show menu icon */
   }
 }

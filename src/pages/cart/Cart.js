@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { incCart, decCart, removeFromCard } from "../../context/cartSlice";
+import { Link } from "react-router-dom";
+import CheckOut from "../checkOut/CheckOut";
+
 const Cart = () => {
   const cart = useSelector((state) => state.cart.value);
   const dispatch = useDispatch();
@@ -97,6 +100,34 @@ const Cart = () => {
       <br />
       <br />
       {items}
+      <div className="return">
+        <button className="cart__btn">Update Cart</button>
+        <button className="cart__btn">Update Cart</button>
+      </div>
+      <div className="cart__register container">
+        <div className="cart__register__left">
+          <input type="text" placeholder="Coupon Code" />
+          <button className="cart__btn">Apply Coupon</button>
+        </div>
+        <div className="cart__register__right">
+          <h2>Cart Total</h2>
+          <div className="subtital">
+            <h3>Subtotal:</h3>
+            <h3>$1750</h3>
+          </div>
+          <div className="subtital">
+            <h3>Shipping:</h3>
+            <h3>Free</h3>
+          </div>
+          <div className="subtital">
+            <h3>Total:</h3>
+            <h3>$$1750</h3>
+          </div>
+          <Link to={"/checkOut"}>
+            <button className="cart__btn">Procees to checkout</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

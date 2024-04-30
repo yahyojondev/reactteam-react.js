@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import NotFound from "./pages/notFound/NotFound";
 import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
+import CheckOut from "./pages/checkOut/CheckOut";
 import About from "./pages/about/About";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/single/:id" element={<SingleRoute />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkOut" element={<CheckOut />} />
         <Route path="/notFound" element={<NotFound />} />
       </Routes>
       <br />
