@@ -7,6 +7,7 @@ import NotFound from "./pages/notFound/NotFound";
 import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
 import About from "./pages/about/About";
+import Account from "./pages/account/Account";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/single/:id" element={<SingleRoute />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/notFound" element={<NotFound />} />
       </Routes>

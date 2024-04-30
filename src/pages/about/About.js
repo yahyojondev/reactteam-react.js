@@ -1,7 +1,23 @@
 import React from "react";
 
 function About() {
-  return <div>Bekzod</div>;
+  return (
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      Bekzod
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+  );
 }
 
 export default About;

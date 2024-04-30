@@ -4,6 +4,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import { GoChevronDown } from "react-icons/go";
 import { NavLink, Link } from "react-router-dom";
+import { BsPerson } from "react-icons/bs";
 import { useSelector } from "react-redux";
 const Navbar = () => {
   const wishes = useSelector((state) => state.wishlist.value);
@@ -65,6 +66,9 @@ const Navbar = () => {
               ) : (
                 <></>
               )}
+            </NavLink>
+            <NavLink className="person" to="/account">
+              <BsPerson className="personIcon" />
             </NavLink>
           </div>
         </div>

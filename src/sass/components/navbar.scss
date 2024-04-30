@@ -161,6 +161,21 @@ a.active{
     color: blue !important;
 }
 }
+.person{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border-radius: 47px;
+    background: rgb(219, 68, 68);
+    .personIcon{
+         font-size: 20px;
+         color: white;
+ 
+    }
+}
 
 
 
