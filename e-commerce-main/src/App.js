@@ -20,6 +20,7 @@ function App() {
       </Routes>
       <br />
       <br />
+      hey bekzod
       <Footer />
     </div>
   );
