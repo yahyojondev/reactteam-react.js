@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
 import About from "./pages/about/About";
 import Product from "./components/product/Product";
+import Erorr from "./components/error/Erorr";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/notFound" element={<NotFound />} />
+        <Route path="*" element={<Erorr/>}/>
       </Routes>
       <br />
       <br />
