@@ -11,6 +11,8 @@ import Product from "./components/product/Product";
 
 import Account from "./pages/account/Account";
 import Contact from "./pages/contact/Contact";
+import SignUp from "./pages/siginUp/SignUp";
+import Login from "./pages/login/Login";
 function App() {
   return (
     <div className="App">
@@ -24,6 +26,8 @@ function App() {
         <Route path="/account" element={<Account />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/notFound" element={<NotFound />} />
       </Routes>
       <br />

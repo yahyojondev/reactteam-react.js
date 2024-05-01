@@ -1,3 +1,16 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.signContainer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 @import url("./components/footer.scss");
 @import url("./components/hero.scss");
 @import url("./components/navbar.scss");
@@ -30,12 +43,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
 .main__product {
   padding-top: 60px;
 }
