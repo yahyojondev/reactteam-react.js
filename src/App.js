@@ -7,6 +7,7 @@ import NotFound from "./pages/notFound/NotFound";
 import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
 import About from "./pages/about/About";
+import Product from "./components/product/Product";
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
       </Routes>
       <br />
       <br />
-      <h2>yahyojon</h2>
       <Footer />
     </div>
   );
