@@ -6,6 +6,7 @@ import { GoChevronDown } from "react-icons/go";
 import { NavLink, Link } from "react-router-dom";
 import { BsPerson } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import AdminPanelSettingsSharpIcon from "@mui/icons-material/AdminPanelSettingsSharp";
 const Navbar = () => {
   const wishes = useSelector((state) => state.wishlist.value);
   const carts = useSelector((state) => state.cart.value);
@@ -69,6 +70,9 @@ const Navbar = () => {
             </NavLink>
             <NavLink className="person" to={"/account"}>
               <BsPerson className="personIcon" />
+            </NavLink>
+            <NavLink to={"/admin"}>
+              <AdminPanelSettingsSharpIcon />
             </NavLink>
           </div>
         </div>

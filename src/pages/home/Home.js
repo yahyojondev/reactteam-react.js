@@ -3,12 +3,47 @@ import Hero from "../../components/hero/Hero";
 import TimerBox from "../../components/timerBox/TimerBox";
 import Product from "../../components/product/Product";
 import axios from "../../api";
+import { FaStar, FaRegHeart, FaRegEye } from "react-icons/fa";
+import { useGetProductQuery } from "../../context/productApi";
 import MainCategory from "../../components/mainCategory/MainCategory";
 import HomeCollection from "../../components/homeCollection/HomeCollection";
 import { homeIconsproducts } from "../../static/Router";
 const Home = () => {
   const [data, setData] = useState([]);
-
+  const { data: proData } = useGetProductQuery({ limit: 10, count: 5 });
+  console.log(proData);
+  let products = proData?.data?.map((el) => (
+    <div key={el.id} className="card">
+      <div className="card__img">
+        <img src="" alt="" />
+        <button className="cart">Add To Cart</button>
+        <div className="click">
+          <button className="likeBtn">
+            <FaRegHeart className="likes" />
+          </button>
+          <button className="eyeBtn">
+            <FaRegEye />
+          </button>
+        </div>
+      </div>
+      <div className="card__info">
+        <h2>{el.title}</h2>
+        <div className="price">
+          <h3 className="new__price">${el.price}</h3>
+          <h3 className="old__price">$360</h3>
+        </div>
+        <div className="rating">
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <h3>(65)</h3>
+        </div>
+        <button>delete</button>
+      </div>
+    </div>
+  ));
   useEffect(() => {
     axios
       .get("/products")
@@ -69,6 +104,13 @@ const Home = () => {
         <div className="homeBoxs">{homeicoonsitems}</div>
       </div>
       <br />
+      <div className="container">
+        <h2>Products</h2>
+        <br />
+        <hr />
+        <br />
+        <div className="products">{products}</div>
+      </div>
     </div>
   );
 };

@@ -7,16 +7,23 @@ import NotFound from "./pages/notFound/NotFound";
 import Footer from "./components/footer/Footer";
 import Cart from "./pages/cart/Cart";
 import About from "./pages/about/About";
-import Product from "./components/product/Product";
-
 import Account from "./pages/account/Account";
 import Contact from "./pages/contact/Contact";
 import SignUp from "./pages/siginUp/SignUp";
 import Login from "./pages/login/Login";
+import Admin from "./pages/admin/Admin";
+import CreateCategory from "./pages/admin/create-category/CreateCategory";
+import CreateProduct from "./pages/admin/create-product/CreateProduct";
+import CreateUser from "./pages/admin/create-user/CreateUser";
+import ManageCategory from "./pages/admin/manage-category/ManageCategory";
+import ManageProduct from "./pages/admin/manage-product/ManageProduct";
+import ManageUser from "./pages/admin/manage-user/ManageUser";
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <ToastContainer />
       <br />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,6 +36,14 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/notFound" element={<NotFound />} />
+        <Route path="/admin/" element={<Admin />}>
+          <Route path="create-category" element={<CreateCategory />} />
+          <Route path="manage-category" element={<ManageCategory />} />
+          <Route path="create-product" element={<CreateProduct />} />
+          <Route path="manage-product" element={<ManageProduct />} />
+          <Route path="create-user" element={<CreateUser />} />
+          <Route path="manage-user" element={<ManageUser />} />
+        </Route>
       </Routes>
       <br />
       <br />

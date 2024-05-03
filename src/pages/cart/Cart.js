@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
+import { IoChevronUpOutline, IoChevronDown } from "react-icons/io5";
 import { incCart, decCart, removeFromCard } from "../../context/cartSlice";
 const Cart = () => {
   const cart = useSelector((state) => state.cart.value);
@@ -24,13 +25,15 @@ const Cart = () => {
             <span>=</span>
           </h3>
           <div className="calculator">
+            <button onClick={() => dispatch(incCart(el))}>
+              <IoChevronUpOutline />
+            </button>
             <button
               disabled={el.quantity <= 1}
               onClick={() => dispatch(decCart(el))}
             >
-              -
+              <IoChevronDown />
             </button>
-            <button onClick={() => dispatch(incCart(el))}>+</button>
           </div>
         </div>
         <h3>${el.price * el.quantity}</h3>

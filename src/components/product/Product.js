@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleToWishes } from "../../context/wishlistSlice";
 import { Link } from "react-router-dom";
 import { addToCard } from "../../context/cartSlice";
-const Product = ({ data, title, button, time }) => {
+const Product = ({ data: dataa, title, button, time }) => {
   const dispatch = useDispatch();
   const wishes = useSelector((state) => state.wishlist.value);
   const cart = useSelector((state) => state.cart.value);
-  let products = data?.map((el) => (
+  let products = dataa?.map((el) => (
     <div key={el.id} className="card">
       <div className="card__img">
         <Link to={`/single/${el.id}`}>
@@ -69,6 +69,7 @@ const Product = ({ data, title, button, time }) => {
         </div>
       </div>
       <div className="products container">{products}</div>
+      <br />
     </>
   );
 };

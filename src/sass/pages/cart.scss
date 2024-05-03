@@ -31,6 +31,7 @@
         line-height: 24px;
         letter-spacing: 0%;
         text-align: left;
+        width: 220px;
         span{
             display: none;
         }
@@ -87,6 +88,8 @@
         border: 1.5px solid rgba(0, 0, 0, 0.4);
         border-radius: 4px;
         padding: 5px 12px;
+        width: 70px;
+        margin-right: 150px;
         gap: 5px;
         .calculator{
             display: flex;
@@ -97,7 +100,6 @@
                 width: 20px;
                 height: 20px;
                 background-color: transparent;
-                border: 1px solid rgba(0, 0, 0, 0.4);
                 border-radius: 5px;
                 display: flex;
                 margin: 0 auto;
